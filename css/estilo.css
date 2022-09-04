@@ -1,0 +1,40 @@
+.tituloMain {
+    text-align: center;
+    font-size: 45px;
+    background-color: red;
+    width: 40%;
+    margin: auto auto;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    border: 3px solid black;
+    border-radius: 10px;
+    text-shadow: 2px 2px 3px white;
+}
+
+.tabelaFuncionarios {
+    border: 2px solid black;
+    width: 50%;
+    margin: auto auto;
+    height: auto;
+    text-align: center;
+}
+
+.cabecalho {
+    font-size: 20px;
+    font-weight: bolder;
+    color: blue;
+    background-color: aqua;
+}
+
+.busca {
+    width: 50%;
+    margin: auto auto;
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    margin-top: 40px;
+}
+
+.inputBusca {
+    font-size: 30px;
+}

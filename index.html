@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Tabela de buscas</title>
+</head>
+
+<h1 class="tituloMain">Sistema de filtragem de busca</h1>
+
+<body>
+    <table border="1" class="tabelaFuncionarios">
+        <thead>
+
+            <tr class="cabecalho">
+                <th>Código</th>
+                <th>Nome</th>
+                <th>Função</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody class="minhaTabela">
+
+            <tr>
+                <td>01</td>
+                <td>Paulo Dias</td>
+                <td>Operador de máquina</td>
+                <td>paulodias@gmail.com</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>Lucas Silva</td>
+                <td>Médico</td>
+                <td>lucassilva@gmail.com</td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>Cristiane de Souza</td>
+                <td>Manicure</td>
+                <td>cristianesouza@gmail.com</td>
+            </tr>
+            <tr>
+                <td>04</td>
+                <td>João de Lima</td>
+                <td>Dentista</td>
+                <td>joaolima@gmail.com</td>
+            </tr>
+            <tr>
+                <td>05</td>
+                <td>Silvio da Cruz</td>
+                <td>Eletricista</td>
+                <td>silviodadruz@gmail.com</td>
+            </tr>
+            <tr>
+                <td>06</td>
+                <td>Sidnei de Mattos</td>
+                <td>Pedreiro</td>
+                <td>sidneimattos@gmail.com</td>
+            </tr>
+            <tr>
+                <td>07</td>
+                <td>Julia de Campos</td>
+                <td>Arquiteta</td>
+                <td>juliasouza@gmail.com</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <div class="busca">
+        <label>Faça a busca pelo funcionário:</label>
+        <br>
+        <input class="inputBusca" type="text" placeholder="Digite aqui">
+    </div>
+
+    <script src="js/jquery-3.6.1.js"></script>
+
+    <script>
+        $(".inputBusca").keyup(function () {
+            var valor = $(this).val().toLowerCase();
+
+            $(".minhaTabela tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(valor) > -1)
+            })
+
+        })
+
+    </script>
+
+</body>
+
+</html>
